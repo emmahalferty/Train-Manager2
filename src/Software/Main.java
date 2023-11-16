@@ -6,6 +6,7 @@ import Hardware.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+// A small command line demo of the engine
 public class Main {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);

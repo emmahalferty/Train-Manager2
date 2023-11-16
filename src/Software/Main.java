@@ -38,6 +38,9 @@ public class Main {
 				System.out.println("view-train CODE: view a single train status");
 				String commands = scan.nextLine();
 				String[] command = commands.split(" ");
+				if (command[0].equals("q") ) {
+					manager = false;
+				}
 				if (command[0].equals("view-routes")) {
 					System.out.println("All available routes:");
 					m.viewRoutes();

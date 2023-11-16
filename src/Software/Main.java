@@ -11,6 +11,7 @@ public class Main {
 		Scanner scan = new Scanner(System.in);
 		boolean run = true;
 		boolean manager = false;
+		boolean passenger = false;
 		while (run) {
 			Passenger p = new Passenger();
 			Manager m = new Manager();
@@ -21,7 +22,9 @@ public class Main {
 			String rights = scan.nextLine();
 			if (rights.equals("m")) {
 				manager = true;
-
+			}
+			if (rights.equals("p")) {
+				passenger = true;
 			}
 			while (manager) {
 				System.out.println("");
@@ -102,6 +105,17 @@ public class Main {
 						}
 					}
 				}
+			}
+			while (passenger) {
+				System.out.println("");
+				System.out.println(
+						"Welcome to passenger commands. Here are associated commands you can take, press q to go back to homepage");
+				String commands = scan.nextLine();
+				String[] command = commands.split(" ");
+				if (command[0].equals("q") ) {
+					passenger = false;
+				}
+				
 			}
 		}
 	}
